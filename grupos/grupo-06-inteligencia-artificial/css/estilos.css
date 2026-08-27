@@ -1,0 +1,490 @@
+/* ============================================================
+   REVISTA DE INVESTIGACIÓN — Hoja de estilos base
+   No eliminen las variables de :root ni las clases
+   .revista__  /  .entrevista__  /  .etapa  /  .articulo__  /  .seccion
+   Pueden AGREGAR reglas al final del archivo.
+   ============================================================ */
+
+/* ---------- Tokens de diseño ---------- */
+
+:root {
+  /* Paleta */
+  --color-fondo:        #F2F0EB;   /* papel ligeramente cálido, evita el blanco puro */
+  --color-papel:        #FAFAF8;   /* fondo de cada artículo */
+  --color-tinta:        #111111;   /* texto principal — contraste máximo */
+  --color-tinta-suave:  #555555;   /* metadatos, pies de foto, etiquetas */
+  --color-acento:       #B5862A;   /* borde decorativo, anillo de foto */
+  --color-acento-texto: #7A5511;   /* mismo tono, más oscuro — contraste WCAG AA */
+  --color-acento-2:     #1A4D6B;   /* citas, enlaces */
+  --color-linea:        #D5D2CB;   /* separadores internos */
+  --color-regla:        #111111;   /* líneas negras de cabecera */
+
+  /* Tipografía */
+  --fuente-titulo: Georgia, 'Times New Roman', serif;
+  --fuente-texto:  Georgia, 'Times New Roman', serif;  /* cuerpo también en serif = estilo editorial */
+  --fuente-meta:   'Courier New', Courier, monospace;
+}
+
+/* ---------- Reset mínimo ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-tinta);
+  font-family: var(--fuente-texto);
+  font-size: 1.0625rem;   /* 17px — legibilidad óptima en pantalla */
+  line-height: 1.75;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-acento-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Contenedor principal ---------- */
+
+main {
+  max-width: 72ch;    /* anchura basada en caracteres: ~66-72ch es el estándar editorial */
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+/* ============================================================
+   CABECERA DE LA REVISTA
+   ============================================================ */
+
+.revista__header {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 3px double var(--color-regla);  /* doble línea = convención tipográfica editorial */
+}
+
+.revista__eyebrow {
+  display: block;
+  font-family: var(--fuente-meta);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-tinta-suave);
+  margin-bottom: 1rem;
+}
+
+.revista__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: normal;       /* los títulos de revista tipográficamente son weight normal en serif */
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.revista__subtitulo {
+  font-family: var(--fuente-titulo);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-tinta-suave);
+  margin: 0 0 1.25rem;
+}
+
+.revista__meta {
+  font-family: var(--fuente-meta);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-tinta-suave);
+  border-top: 1px solid var(--color-linea);
+  padding-top: 0.75rem;
+  display: block;
+}
+
+/* ============================================================
+   BLOQUE DE ENTREVISTA — un <article class="entrevista"> por integrante
+   ============================================================ */
+
+.entrevista {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 3px solid var(--color-regla);
+}
+
+/* Encabezado del integrante */
+.entrevista__encabezado {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.entrevista__foto {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.entrevista__foto img {
+  width: 96px;
+  height: 120px;             /* retrato rectangular — convención fotográfica editorial */
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border: 1px solid var(--color-linea);
+}
+
+.entrevista__nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
+}
+
+.entrevista__rol {
+  font-family: var(--fuente-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-acento-texto);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+/* ---------- Cuerpo editorial (columnas + drop cap) ---------- */
+
+.entrevista__cuerpo {
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   ETAPAS DEL MÉTODO CIENTÍFICO
+   ============================================================ */
+
+.etapa {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-linea);
+  break-inside: avoid;
+}
+
+.etapa__numero {
+  font-family: var(--fuente-meta);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-tinta-suave);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.etapa__pregunta {
+  font-family: var(--fuente-titulo);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: var(--color-tinta);
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.etapa__respuesta {
+  margin: 0;
+  color: var(--color-tinta);    /* texto principal en tinta plena, no gris */
+  line-height: 1.8;             /* interlineado generoso para lectura larga */
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* ---------- Cita destacada (pull quote) ---------- */
+
+.destacado {
+  margin: 2.5rem 0;
+  padding: 1.25rem 2rem;
+  border-top: 2px solid var(--color-regla);
+  border-bottom: 2px solid var(--color-regla);
+  font-family: var(--fuente-titulo);
+  font-style: italic;
+  font-size: 1.45rem;
+  line-height: 1.45;
+  color: var(--color-tinta);
+  text-align: center;
+  column-span: all;   /* rompe columnas cuando está dentro de .entrevista__cuerpo */
+}
+
+/* ---------- Letra capital — primera respuesta ---------- */
+
+.entrevista__cuerpo .etapa:first-of-type .etapa__respuesta::first-letter {
+  font-family: var(--fuente-titulo);
+  font-size: 4rem;
+  font-weight: bold;
+  float: left;
+  line-height: 0.78;
+  padding: 0.05rem 0.35rem 0 0;
+  color: var(--color-tinta);
+}
+
+/* ---------- Accesibilidad: foco visible ---------- */
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-acento-2);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Pie de página ---------- */
+
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  font-family: var(--fuente-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--color-tinta-suave);
+  border-top: 1px solid var(--color-linea);
+  margin-top: 4rem;
+}
+
+/* ============================================================
+   FORMATO ARTÍCULO CIENTÍFICO — alternativa a .entrevista
+   Misma paleta, tipografía y sistema de columnas/impresión.
+   ============================================================ */
+
+.articulo {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 3px solid var(--color-regla);
+}
+
+.articulo__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.articulo__autores {
+  font-family: var(--fuente-meta);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--color-tinta-suave);
+  margin: 0 0 2rem;
+  border-bottom: 1px solid var(--color-linea);
+  padding-bottom: 1rem;
+}
+
+/* Resumen / Abstract */
+.articulo__resumen {
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--color-acento);
+  background-color: transparent;
+}
+
+.articulo__resumen-titulo {
+  font-family: var(--fuente-meta);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-tinta-suave);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.articulo__resumen p {
+  font-style: italic;
+  color: var(--color-tinta);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.articulo__cuerpo {
+  margin-top: 0.5rem;
+}
+
+/* Drop cap para la primera sección del artículo */
+.articulo__cuerpo .seccion:first-of-type .seccion__texto::first-letter {
+  font-family: var(--fuente-titulo);
+  font-size: 4rem;
+  font-weight: bold;
+  float: left;
+  line-height: 0.78;
+  padding: 0.05rem 0.35rem 0 0;
+  color: var(--color-tinta);
+}
+
+.seccion {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-linea);
+  break-inside: avoid;
+}
+
+.seccion__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.6rem;
+}
+
+.seccion__texto {
+  margin: 0;
+  color: var(--color-tinta);
+  line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* Referencias bibliográficas */
+.referencias {
+  font-family: var(--fuente-meta);
+  font-size: 0.82rem;
+  color: var(--color-tinta-suave);
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.referencias li {
+  margin-bottom: 0.75rem;
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* ============================================================
+   RESPONSIVE — pantallas medianas y grandes
+   ============================================================ */
+
+@media (min-width: 760px) {
+  main {
+    max-width: 84ch;    /* columnas dobles necesitan más ancho */
+  }
+
+  /* Columnas tipo revista en el cuerpo de entrevista */
+  .entrevista__cuerpo {
+    column-count: 2;
+    column-gap: 2.75rem;
+    column-rule: 1px solid var(--color-linea);
+  }
+
+  /* Columnas para el artículo científico */
+  .articulo__cuerpo {
+    column-count: 2;
+    column-gap: 2.75rem;
+    column-rule: 1px solid var(--color-linea);
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .entrevista__encabezado {
+    flex-direction: column;
+  }
+
+  .entrevista__foto img {
+    width: 80px;
+    height: 100px;
+  }
+
+  .entrevista__cuerpo .etapa:first-of-type .etapa__respuesta::first-letter {
+    font-size: 3rem;
+  }
+}
+
+/* ============================================================
+   IMPRESIÓN / EXPORTAR A PDF
+   ============================================================ */
+
+@media print {
+  body {
+    background: #FFFFFF;
+    font-size: 10.5pt;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .entrevista,
+  .articulo {
+    border-top: 2pt solid #000000;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .entrevista__cuerpo,
+  .articulo__cuerpo {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+
+  .revista__header {
+    border-bottom: 2pt double #000000;
+  }
+
+  footer {
+    display: none;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #555555;
+  }
+}
+/* ============================================================
+   IMÁGENES — ESTILO REVISTA DE INVESTIGACIÓN
+   ============================================================ */
+
+.seccion img {
+  display: block;
+  width: 94%;
+  max-width: 680px;
+  height: 300px;
+  object-fit: cover;
+  margin: 2.5rem auto;
+
+  padding: 6px;
+  background-color: var(--color-papel);
+  border: 1px solid var(--color-linea);
+  border-radius: 2px;
+
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* ============================================================
+   IMÁGENES EN CELULAR
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .seccion img {
+    width: 100%;
+    height: 230px;
+    padding: 4px;
+    margin: 2rem auto;
+  }
+}

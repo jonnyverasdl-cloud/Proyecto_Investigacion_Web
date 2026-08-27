@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Inteligencia Artificial aplicada a la detección de amenazas de ciberseguridad
+    — Revista de Investigación
+  </title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO DE LA REVISTA
+       ============================================================ -->
+
+  <header class="revista__header">
+
+    <span class="revista__eyebrow">
+      Investigación · Ingeniería en Sistemas
+    </span>
+
+    <h1 class="revista__titulo">
+      Inteligencia Artificial aplicada a la detección de amenazas de ciberseguridad
+    </h1>
+
+    <p class="revista__subtitulo">
+      El uso de tecnologías inteligentes para identificar comportamientos
+      sospechosos y fortalecer la seguridad de sistemas y redes.
+    </p>
+
+    <p class="revista__meta">
+      Grupo 4 · TecnicosMG · Edición Agosto 2026
+    </p>
+
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+         ARTÍCULO CIENTÍFICO
+         ============================================================ -->
+
+    <article class="articulo">
+
+      <h2 class="articulo__titulo">
+        Inteligencia Artificial aplicada a la detección de amenazas
+        de ciberseguridad
+      </h2>
+
+      <p class="articulo__autores">
+        Por: ALdron Edgardo Marin Ramos, Balta Eduardo Tello Recinos, Domingo Darinel López Ramírez, Hector Eduardo Cahuil Mateo 
+      </p>
+
+
+      <!-- ============================================================
+           RESUMEN
+           ============================================================ -->
+
+      <div class="articulo__resumen">
+
+        <span class="articulo__resumen-titulo">
+          Resumen
+        </span>
+
+        <p>
+          La ciberseguridad enfrenta el desafío de detectar amenazas dentro
+          de grandes cantidades de información generada por sistemas y redes
+          informáticas. Esta investigación analiza cómo la Inteligencia
+          Artificial puede contribuir a la detección de amenazas mediante el
+          reconocimiento de patrones y comportamientos anómalos. Se realizó
+          una investigación documental y descriptiva utilizando fuentes
+          especializadas relacionadas con Inteligencia Artificial,
+          aprendizaje automático y ciberseguridad. Los resultados de la
+          revisión indican que estas tecnologías pueden ayudar a analizar
+          grandes volúmenes de datos, identificar actividades sospechosas y
+          priorizar alertas de seguridad. Sin embargo, también presentan
+          limitaciones como los falsos positivos, la dependencia de datos de
+          calidad y la necesidad de supervisión humana. Finalmente, se
+          propone utilizar la Inteligencia Artificial como herramienta de
+          apoyo para complementar las estrategias tradicionales de
+          ciberseguridad.
+        </p>
+
+      </div>
+
+
+      <!-- ============================================================
+           CUERPO DEL ARTÍCULO
+           ============================================================ -->
+
+      <div class="articulo__cuerpo">
+
+
+        <!-- ============================================================
+             1. PLANTEAMIENTO DEL PROBLEMA
+             ============================================================ -->
+
+        <!-- Aporte: Aldron Edgardo Marin Ramos  -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+            1. Introducción
+          </h3>
+
+
+         <p class="seccion__texto">
+         El crecimiento de la tecnología y la conexión permanente a
+         Internet han provocado que una gran cantidad de información sea
+         almacenada y transmitida mediante sistemas informáticos. Las
+         organizaciones utilizan redes, servidores, aplicaciones y
+         dispositivos conectados para desarrollar sus actividades
+         diariamente. Sin embargo, esta dependencia tecnológica también
+         aumenta la posibilidad de sufrir ataques y amenazas de ciberseguridad.
+
+         Entre las amenazas que pueden afectar a los sistemas informáticos
+         se encuentran los accesos no autorizados, el robo de información,
+         los programas maliciosos, los ataques de denegación de servicio y
+         diferentes técnicas utilizadas para comprometer redes y
+         dispositivos.</p>   
+
+         <img 
+           src="assets/7436E61E-4267-4A9A-9281-3401B207D369.jpeg" 
+           alt="Ciberseguridad y protección de redes"
+           >
+
+         <p>Uno de los principales problemas para los responsables de
+         seguridad informática es la enorme cantidad de eventos que deben
+         analizar. Una red puede generar miles de registros y alertas en
+         poco tiempo, por lo que realizar todo el análisis de forma manual
+         puede resultar lento y dificultar la identificación de amenazas
+         importantes.
+
+         Ante esta situación, la Inteligencia Artificial representa una
+         alternativa tecnológica que puede apoyar los procesos de
+         ciberseguridad. Mediante técnicas de aprendizaje automático,
+         estos sistemas pueden analizar información, reconocer patrones y
+         detectar comportamientos que se alejan de la actividad habitual.
+
+         El problema de investigación se centra en determinar de qué
+         manera la Inteligencia Artificial puede ayudar a detectar
+         amenazas de ciberseguridad de manera más eficiente y cuáles son
+         las condiciones que deben considerarse para utilizarla
+         correctamente.
+
+         A partir de este problema se plantea la siguiente pregunta de
+         investigación:
+
+         ¿Cómo puede la Inteligencia Artificial contribuir a mejorar la
+         detección de amenazas de ciberseguridad en sistemas y redes
+         informáticas?
+         </p>
+
+        </section>
+
+
+        <!-- ============================================================
+             2. HIPÓTESIS
+             ============================================================ -->
+
+        <!-- Aporte: Balta Eduardo Tello Recinos -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+            2. Objetivos e hipótesis
+          </h3>
+
+         <p class="seccion__texto">          
+         El objetivo general de esta investigación es analizar la aplicación de       
+         técnicas de Inteligencia Artificial, específicamente el aprendizaje
+         automático y el aprendizaje profundo, en la detección de amenazas de
+         ciberseguridad, con el fin de determinar su efectividad frente a los
+         métodos tradicionales de detección basados en firmas.
+
+         Para alcanzar este objetivo, se busca identificar los principales algoritmos
+         y modelos de Inteligencia Artificial empleados actualmente en la detección
+         de intrusiones y anomalías en redes, entre ellos las redes neuronales, los
+         árboles de decisión, las máquinas de soporte vectorial (SVM) y las técnicas
+         de aprendizaje no supervisado.
+          
+         También se pretende describir las ventajas y limitaciones de los sistemas
+         de detección de amenazas basados en Inteligencia Artificial en comparación
+         con los sistemas tradicionales que utilizan firmas y reglas heurísticas.
+         Además, se busca evaluar casos reales o estudios existentes sobre la
+         implementación de Inteligencia Artificial en sistemas de detección y
+         prevención de intrusos (IDS/IPS), considerando indicadores como la tasa de
+         precisión, los falsos positivos y los falsos negativos.
+          
+         Finalmente, se pretende establecer los principales desafíos técnicos y
+         éticos que enfrenta la Inteligencia Artificial aplicada a la
+         ciberseguridad, incluyendo aspectos como los sesgos, la explicabilidad de
+         los modelos y los posibles ataques adversariales.</p>
+
+         <p>La hipótesis general plantea que la implementación de modelos de
+         Inteligencia Artificial en los sistemas de detección de amenazas de
+         ciberseguridad mejora significativamente la capacidad de identificar
+         ataques nuevos o desconocidos (<em>zero-day</em>) en comparación con los
+         métodos tradicionales basados en firmas. Asimismo, se plantea que su
+         implementación puede contribuir a reducir el tiempo de respuesta y la tasa
+         de falsos negativos.
+
+         Como hipótesis nula (H0), se establece que la aplicación de Inteligencia
+         Artificial no genera una diferencia estadísticamente significativa en la
+         efectividad de detección de amenazas en comparación con los métodos
+         tradicionales.
+
+         Por otro lado, la hipótesis alternativa (H1) establece que los sistemas de
+         detección de amenazas basados en Inteligencia Artificial presentan una tasa
+         de detección superior y un menor número de falsos positivos y falsos
+         negativos en comparación con los sistemas tradicionales.
+         </p>
+        
+        </section>
+
+
+        <!-- ============================================================
+             3. METODOLOGÍA
+             ============================================================ -->
+
+        <!-- Aporte: Domingo Darinel López Ramírez -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+         3. Metodología
+         </h3>
+
+         <p class="seccion__texto">
+         Para realizar esta investigación se utilizó un enfoque documental,
+         descriptivo y comparativo, basado en la búsqueda, selección y análisis de
+         estudios científicos relacionados con la aplicación de la Inteligencia
+         Artificial en la detección de amenazas de ciberseguridad.
+
+         La información se obtuvo principalmente de artículos académicos y
+         publicaciones científicas relacionadas con Inteligencia Artificial,
+         aprendizaje automático, aprendizaje profundo y sistemas de detección de
+         intrusos (IDS/IPS). Se priorizaron investigaciones recientes y
+         directamente relacionadas con el tema, entre ellas los trabajos de
+         Mohamed (2023), Salem et al. (2024) y Mohale y Obagbuwa (2025).
+
+         Como método de análisis, se realizó una comparación de los resultados
+         reportados en los estudios seleccionados. Para ello se tomaron en cuenta
+         indicadores como precisión, recall, F1-score, falsos positivos y falsos
+         negativos, con el propósito de conocer el desempeño de los diferentes
+         modelos de Inteligencia Artificial utilizados en la detección de amenazas.</p>
+         
+         <img 
+               src="assets/B4C85876-5A5D-482E-8C59-0D915694CC7D.jpeg" 
+               alt="Ciberseguridad"
+               >
+
+         <p>La investigación no incluyó experimentos propios. Los resultados fueron
+         obtenidos mediante el análisis de investigaciones existentes, comparando
+         sus hallazgos para determinar si la evidencia disponible respalda la
+         hipótesis de que la Inteligencia Artificial puede mejorar la detección de
+         amenazas frente a los métodos tradicionales basados en firmas y reglas.
+
+         Finalmente, se analizaron las principales dificultades relacionadas con
+         la implementación de estas tecnologías, considerando aspectos como el
+         costo computacional, la calidad de los datos de entrenamiento, la
+         privacidad, los sesgos y la explicabilidad de los modelos. De esta forma,
+         se buscó obtener una visión equilibrada sobre los beneficios y
+         limitaciones de la Inteligencia Artificial aplicada a la ciberseguridad.
+         </p>
+        </section>
+
+
+        <!-- ============================================================
+             CITA DESTACADA
+             ============================================================ -->
+
+        <blockquote class="destacado">
+          La Inteligencia Artificial puede ayudar a transformar grandes
+          cantidades de datos de seguridad en información útil para detectar
+          posibles amenazas.
+        </blockquote>
+
+
+        <!-- ============================================================
+             4. RESULTADOS / HALLAZGOS
+             ============================================================ -->
+
+        <!-- Aporte: Hector Eduardo Cahuil Mateo -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+            4. Resultados
+          </h3>
+
+        <p class="seccion__texto">
+         De acuerdo con los estudios analizados la inteligencia artificial puede mejorar
+         la detección de amenazas de ciberseguridad como aquellas que no han sido
+         previamente identificadas técnicas como las redes neuronales, árboles de
+         decisión y máquinas de soporte vectorial han demostrado buenos resultados
+         en la detección de anomalías y ataques.
+         Su efectividad depende de la calidad de los datos, el modelo utilizado y los
+         recursos disponibles esto también pueden presentarse falsos positivos y falsos
+         negativos además de desafíos relacionados con la privacidad.
+         Los resultados revisados respaldan parcialmente la hipótesis planteada ya que
+         la IA present ventajas frente a los metodos basados únicamente en firmas,
+         pero no necesariamente los reemplaza por completo. Por ello, la combinación
+         de ambos métodos puede ofrecer una estrategia de detección más completa.
+          </p>
+         <p>
+          Hemos llegado a la conclusión de que la inteligencia artificial tiene un gran
+         potencial para poder fortalecer muchos campos como la ciberseguridad en la
+         detección de amenazas nuevas y en los comportamientos anómalos, aunque
+         posee ventajas frente a los métodos comunes, también tiene limitaciones
+         relacionadas con los datos, los recursos, la IA debe utilizarse como
+         complemento de los sistemas tradicionales basados en firmas, lo cual nos
+         permite aprovechar las ventajas de ambos métodos para lograr una detección
+         de amenazas mejor manera</p>
+
+        </section>
+
+
+        <!-- ============================================================
+             5. CONCLUSIÓN / PROPUESTA
+             ============================================================ -->
+
+        <!-- Aporte: Aldron Edgardo Marin Ramos -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+            5. Discusión y conclusión
+          </h3>
+
+         <p class="seccion__texto">
+          A partir del análisis de los estudios seleccionados, se observa que la Inteligencia 
+          Artificial tiene un importante potencial para fortalecer la detección de amenazas de ciberseguridad.
+          Las técnicas de aprendizaje automático y aprendizaje profundo permiten analizar grandes cantidades 
+          de información, reconocer patrones y detectar comportamientos anómalos que pueden pasar desapercibidos 
+          mediante métodos tradicionales basados en firmas.
+
+          <p>La investigación permitió identificar modelos como redes neuronales, árboles de decisión, Random Forest, 
+          SVM y aprendizaje no supervisado, los cuales pueden utilizarse en sistemas de detección de intrusos (IDS/IPS). 
+          Sin embargo, su efectividad depende de factores como la calidad de los datos, los recursos computacionales y 
+          la correcta configuración de los modelos. También existen desafíos relacionados 
+          con los falsos positivos, falsos negativos, privacidad, sesgos y explicabilidad. </p>
+          
+          <p>En relación con la hipótesis, 
+          la evidencia revisada indica que la Inteligencia Artificial puede mejorar la capacidad para detectar 
+          amenazas nuevas o desconocidas (<em>zero-day</em>). No obstante, debido a que esta investigación fue 
+          documental y no incluyó experimentos propios, no se puede afirmar que los sistemas de IA sean superiores en todos los escenarios.</p>
+
+          <p>En conclusión, la Inteligencia Artificial puede complementar de manera efectiva los métodos tradicionales de ciberseguridad.
+          Su combinación con firmas y reglas heurísticas permite aprovechar las ventajas de ambos enfoques
+          y fortalecer la detección y respuesta ante diferentes tipos de amenazas.
+          </p>
+
+           <img 
+               src="assets/BE4EC85C-46C8-4898-9A80-C1DBC80BB13E.jpeg" 
+               alt="Seguridad"
+            >
+          
+
+        </section>
+
+
+        <!-- ============================================================
+             REFERENCIAS
+             Esta sección es bibliográfica y no corresponde a una etapa
+             adicional del método científico.
+             ============================================================ -->
+
+        <!-- Aporte: Todo el grupo -->
+
+        <section class="seccion">
+
+          <h3 class="seccion__titulo">
+            Referencias
+          </h3>
+
+          <ol class="referencias">
+
+            # Referencias
+
+  
+            <li>
+              Mohale, V. Z., &amp; Obagbuwa, I. C. (2025). A systematic review on the
+              integration of explainable artificial intelligence in intrusion detection
+              systems to enhancing transparency and interpretability in cybersecurity.
+              <em>Frontiers in Artificial Intelligence, 8</em>, 1526221.
+              https://doi.org/10.3389/frai.2025.1526221
+  
+            </li>
+
+  
+            <li>Mohamed, N. (2023). Current trends in AI and ML for cybersecurity:
+              A state-of-the-art survey.<em>Cogent Engineering, 10</em>(2), 2272358.
+              https://doi.org/10.1080/23311916.2023.2272358
+  
+            </li>
+
+  
+            <li> Salem, A. H., Azzam, S. M., Emam, O. E., &amp; Abohany, A. A. (2024).
+               Advancing cybersecurity: A comprehensive review of AI-driven detection
+               techniques. <em>Journal of Big Data, 11</em>, 105.
+               https://doi.org/10.1186/s40537-024-00957-y
+  
+            </li>
+            
+            <li> National Institute of Standards and Technology. (2023).
+               <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>.
+               U.S. Department of Commerce.https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+            </li>
+            
+            <li>
+               National Institute of Standards and Technology. (2012).
+               <em>Computer Security Incident Handling Guide</em>.
+               Special Publication 800-61 Revision 2.
+                https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+            </li>
+            
+            <li>MITRE. (2026).
+              <em>MITRE ATT&amp;CK: Knowledge Base of Adversary Tactics and Techniques</em>.
+               https://attack.mitre.org/
+            </li>
+            <li>
+              European Union Agency for Cybersecurity (ENISA). (2023).
+              <em>ENISA Threat Landscape 2023</em>.
+              https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023
+            </li>
+            
+            <li>
+              <em>A deep learning/machine learning approach for anomaly based network
+                intrusion detection</em>. (2024). PMC.
+                 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12455727/
+                </li>
+
+          </ol>
+
+        </section>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- ============================================================
+       1 inteligencia 
+       ============================================================ -->
+
+  <footer>
+    Proyecto de Investigación Web · Ingeniería en Sistemas
+  </footer>
+
+</body>
+</html>
